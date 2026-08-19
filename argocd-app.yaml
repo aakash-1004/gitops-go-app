@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitops-go-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/aakash-1004/gitops-go-app.git
+    targetRevision: main
+    path: helm/gitops-go-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

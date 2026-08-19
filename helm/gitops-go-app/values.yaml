@@ -13,7 +13,7 @@ service:
 ingress:
   enabled: true
   className: nginx
-  host: go-app.local
+  host: gitops-go-app.duckdns.org
 
 resources:
   requests:
