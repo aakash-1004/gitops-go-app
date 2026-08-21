@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: aakash0908/gitops-go-app
-  tag: 63f7c8d
+  tag: c64c804
   pullPolicy: Always
 
 service:
